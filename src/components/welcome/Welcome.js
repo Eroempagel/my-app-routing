@@ -1,7 +1,8 @@
 import React from "react";
 
 function Welcome(props) {
-  return <div className="Welcome">Welcome, {props.name}!</div>;
+  let name = (props.match && props.match.params.name) || props.name;
+  return <div className="Welcome">Welcome, {name}!</div>;
 }
 
 export default Welcome;

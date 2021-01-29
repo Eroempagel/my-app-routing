@@ -14,18 +14,12 @@ function App() {
       <Switch>
         <Route
           exact
-          path="/welcome/:name"
-          render={(props) => (
-            <Welcome {...props} name={props.match.params.name} />
-          )}
-        />
-        <Route
-          exact
           path="/"
           render={(props) => <Welcome {...props} name="Erik" />}
         />
         <Route exact path="/clock" component={Clock} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/welcome/:name" component={Welcome} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
     </div>
